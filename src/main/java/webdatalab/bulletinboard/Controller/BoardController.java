@@ -7,20 +7,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import webdatalab.bulletinboard.service.BoardService;
 
-@Controller // 어노테이션을 입력하면 알아서 상단에 import 가 된다!
+@Controller
 
 @RequestMapping("/board/**")
 @RequiredArgsConstructor
 public class BoardController {
 
     private final BoardService service;
+
     @GetMapping("/hello")
     public String Hello() {
         return "/boards/hello";
     }
 
     @GetMapping("/test")
-    public String test(Model model){
+    public String test(Model model) {
         model.addAttribute("cnt", service.boardCount());
         model.addAttribute("test", service.boardList());
 
