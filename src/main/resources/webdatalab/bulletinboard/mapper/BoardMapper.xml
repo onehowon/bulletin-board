@@ -11,6 +11,6 @@
     <select id="getList" resultType="webdatalab.bulletinboard.domain.Board">
         SELECT
             *
-        FROM tbl_board
+        FROM tbl_board //  게시글 리스트 반환
     </select>
 </mapper>

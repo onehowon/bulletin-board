@@ -1,0 +1,3 @@
+2024-03-16 15:30:49.778284+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_BOARD" not found (this database is empty); SQL statement:
+SELECT count(boardId) AS cnt FROM tbl_board [42104-224]
