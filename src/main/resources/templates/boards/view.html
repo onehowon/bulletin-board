@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>게시글 상세보기</title>
+</head>
+<body>
+<div class="container">
+  <h1>게시글 상세보기</h1>
+  <p>글번호: <span th:text="${halo.boardId}"></span></p>
+  <p>제목: <span th:text="${halo.title}"></span></p>
+  <p>작성자: <span th:text="${halo.name}"></span></p>
+  <p>내용: <span th:text="${halo.content}"></span></p>
+  <p>조회수: <span th:text="${halo.read}"></span></p>
+</div>
+</body>
+</html>

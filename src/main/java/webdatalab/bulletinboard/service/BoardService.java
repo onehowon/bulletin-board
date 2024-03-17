@@ -21,4 +21,8 @@ public class BoardService {
     public List<Board> boardList() {
         return boardMapper.getList(); // 게시글 리스트 반환
     }
+
+    public Board getBoard(Long boardId){
+        return boardMapper.getBoard(boardId);
+    }
 }
