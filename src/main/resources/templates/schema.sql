@@ -5,7 +5,6 @@ CREATE TABLE tbl_board (
                            name VARCHAR(30) NOT NULL,
                            `read` INT NOT NULL DEFAULT 0
 );
-
 INSERT INTO tbl_board (title, content, name, `read`)
 VALUES
     ('제목1', '내용1', '이름1', 0),
@@ -18,3 +17,4 @@ VALUES
     ('제목8', '내용8', '이름8', 0),
     ('제목9', '내용9', '이름9', 0),
     ('제목10', '내용10', '이름10', 0);
+
