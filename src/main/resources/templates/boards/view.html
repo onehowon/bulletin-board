@@ -10,8 +10,9 @@
   <p>글번호 : <span th:text="${halo.boardId}"></span></p>
   <p>제목 : <span th:text="${halo.title}"></span></p>
   <p>작성자 : <span th:text="${halo.name}"></span></p>
-  <p>내용 : <textarea class="form-control" th:text="${halo.content}"></textarea></p>
+  <p>내용 : <textarea class="form-control" readonly="readonly" th:text="${halo.content}"></textarea></p>
   <p>조회수 : <span th:text="${halo.read}"></span></p>
+  <p>게시글 링크: <a th:href="@{'/board/view/' + ${halo.boardId}}">게시글 보기</a></p>
 </div>
 </body>
 </html>

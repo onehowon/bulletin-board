@@ -22,7 +22,12 @@ public class BoardService {
         return boardMapper.getList(); // 게시글 리스트 반환
     }
 
-    public Board getBoard(Long boardId){
+    public Board getBoard(Long boardId) {
         return boardMapper.getBoard(boardId);
     }
+
+    public void uploadBoard(Board board){
+        boardMapper.uploadBoard(board);
+    }
+
 }

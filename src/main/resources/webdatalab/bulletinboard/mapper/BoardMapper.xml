@@ -19,4 +19,10 @@
             *
         FROM tbl_board where boardId=#{boardId};
     </select>
+
+    <insert id="uploadBoard" parameterType="webdatalab.bulletinboard.domain.Board">
+        INSERT INTO tbl_board (title, content, name)
+        VALUES
+            (#{title}, #{content}, #{name});
+    </insert>
 </mapper>
