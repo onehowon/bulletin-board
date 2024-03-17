@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+data/h2data.mv.db
+
+h2data.mv.db
