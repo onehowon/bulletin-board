@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import webdatalab.bulletinboard.domain.Board;
 import webdatalab.bulletinboard.service.BoardService;
 
+// Controller
 @Controller
 @RequestMapping("/board")
 @RequiredArgsConstructor
