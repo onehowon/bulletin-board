@@ -11,6 +11,7 @@ import webdatalab.bulletinboard.domain.Board;
 import webdatalab.bulletinboard.service.BoardService;
 
 // Controller
+// 테스트
 @Controller
 @RequestMapping("/board")
 @RequiredArgsConstructor
