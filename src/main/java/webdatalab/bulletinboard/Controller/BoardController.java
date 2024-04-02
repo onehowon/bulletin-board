@@ -53,9 +53,22 @@ public class BoardController {
         return "redirect:/board/main";
     }
 
-//    @PutMapping("/update")
-//    public String updateBoard(Board board){
-//        service.updateBoard(board);
-//        return "redirect:/board/main";
-//    }
+    @GetMapping("/update")
+    public String updateBoardForm(Model model, Long boardId){
+        model.addAttribute("update", service.getBoard(boardId));
+
+        return "/boards/update";
+    }
+
+    @PostMapping("/update")
+    public String updateBoard(Board board){
+        service.updateBoard(board);
+        return "redirect:/board/main";
+    }
+
+    @GetMapping("/delete")
+    public String deleteBoard(Long boardId){
+        service.deleteBoard(boardId);
+        return "redirect:/board/main";
+    }
 }

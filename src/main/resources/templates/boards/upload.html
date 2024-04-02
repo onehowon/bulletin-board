@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html xmlns xmlns:th="http://www.w3.org/1999/xhtml" : th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="container">
-    <form th:action="@{upload}" method="post">
+<form id="form" th:action="@{update}" method="put">
+    <p>글번호 : [[${update.boardId}]]</p>
+    제목 :
+    <div id="title">
+        <textarea class="form-control" th:placeholder="${update.title}" id='updateTitle'>[[${update.title}]]</textarea>
+    </div>
+    <p>작성자 : [[${update.name}]]</p>
+    내용 :
+    <div id="content">
+        <textarea class="form-control" th:placeholder="${update.content}" id='updateContent'>[[${update.content}]]</textarea>
+    </div>
+</form>
 
-        <input type="text" class="form-control" name="name">
-        <input type="text" class="form-control" name="title">
-        <textarea class="form-control" name="content"></textarea>
-
-        <button type="submit">btn</button>
-    </form>
-</div>
-</body>
-</html>
+<form th:action="@{main}" method="put">
+    <input type="hidden" name="boardId" th:value="${update.boardId}">
+    <button type="submit">수정</button>
+</form>

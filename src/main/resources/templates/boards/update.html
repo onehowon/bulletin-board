@@ -1,17 +1,30 @@
-<form id="form" th:action="@{update}" method="put">
-    <p>글번호 : [[${update.boardId}]]</p>
-    제목 :
-    <div id="title">
-        <textarea class="form-control" th:placeholder="${update.title}" id='updateTitle'>[[${update.title}]]</textarea>
-    </div>
-    <p>작성자 : [[${update.name}]]</p>
-    내용 :
-    <div id="content">
-        <textarea class="form-control" th:placeholder="${update.content}" id='updateContent'>[[${update.content}]]</textarea>
-    </div>
-</form>
-
-<form th:action="@{main}" method="put">
-    <input type="hidden" name="boardId" th:value="${update.boardId}">
-    <button type="submit">수정</button>
-</form>
+<!DOCTYPE html>
+<html xmlns xmlns:th="http://www.w3.org/1999/xhtml" : th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <form id="form" th:action="@{update}" method="post">
+        <p>글번호 : [[${update.boardId}]]</p>
+        제목 :
+        <div id="title">
+            <textarea
+                    class="form-control" placeholder='제목 입력' name="title">
+            </textarea>
+        </div>
+        <p>작성자 : [[${update.name}]]</p>
+        내용 :
+        <div id="content">
+            <textarea
+                    class="form-control" placeholder='내용 입력' name="content">
+            </textarea>
+        </div>
+        <input type="hidden" name="boardId" th:value="${update.boardId}">
+        <button type="submit">저장</button>
+    </form>
+</div>
+</body>
+</html>
