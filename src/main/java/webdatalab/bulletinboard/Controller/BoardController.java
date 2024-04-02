@@ -38,6 +38,7 @@ public class BoardController {
 
     @GetMapping("/view/{boardId}") // URL 경로에 게시글 ID를 포함합니다.
     public String viewBoard(Model model, @PathVariable("boardId") Long boardId){ // PathVariable 어노테이션을 사용하여 경로에서 boardId를 받아옵니다.
+        service.viewCount(boardId);
         model.addAttribute("halo", service.getBoard(boardId));
         return "boards/view"; // 뷰 파일의 경로와 파일 이름만 반환합니다.
     }
@@ -71,4 +72,5 @@ public class BoardController {
         service.deleteBoard(boardId);
         return "redirect:/board/main";
     }
+
 }

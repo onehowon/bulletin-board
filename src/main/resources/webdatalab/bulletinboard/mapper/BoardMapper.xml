@@ -25,7 +25,7 @@
         VALUES
             (#{title}, #{content}, #{name});
     </insert>
-    <update id="updateBoard" parameterType="wedatalab.bulletinboard.domain.Board">
+    <update id="updateBoard" parameterType="webdatalab.bulletinboard.domain.Board">
         UPDATE tbl_board
         SET title=#{title}, content=#{content}
         WHERE boardId=#{boardId};
@@ -36,4 +36,10 @@
         FROM tbl_board
         WHERE boardId=#{boardId};
     </delete>
+
+    <update id="viewCount">
+        UPDATE tbl_board
+        SET read = read + 1
+        WHERE boardId=#{boardId};
+    </update>
 </mapper>
