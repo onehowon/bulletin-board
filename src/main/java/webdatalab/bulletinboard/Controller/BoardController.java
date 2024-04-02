@@ -3,10 +3,7 @@ package webdatalab.bulletinboard.Controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import webdatalab.bulletinboard.domain.Board;
 import webdatalab.bulletinboard.service.BoardService;
 
@@ -55,4 +52,10 @@ public class BoardController {
         service.uploadBoard(board);
         return "redirect:/board/main";
     }
+
+//    @PutMapping("/update")
+//    public String updateBoard(Board board){
+//        service.updateBoard(board);
+//        return "redirect:/board/main";
+//    }
 }

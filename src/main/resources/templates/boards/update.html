@@ -1,0 +1,17 @@
+<form id="form" th:action="@{update}" method="put">
+    <p>글번호 : [[${update.boardId}]]</p>
+    제목 :
+    <div id="title">
+        <textarea class="form-control" th:placeholder="${update.title}" id='updateTitle'>[[${update.title}]]</textarea>
+    </div>
+    <p>작성자 : [[${update.name}]]</p>
+    내용 :
+    <div id="content">
+        <textarea class="form-control" th:placeholder="${update.content}" id='updateContent'>[[${update.content}]]</textarea>
+    </div>
+</form>
+
+<form th:action="@{main}" method="put">
+    <input type="hidden" name="boardId" th:value="${update.boardId}">
+    <button type="submit">수정</button>
+</form>

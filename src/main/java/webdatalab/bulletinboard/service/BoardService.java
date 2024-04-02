@@ -30,4 +30,6 @@ public class BoardService {
         boardMapper.uploadBoard(board);
     }
 
+    // public int updateBoard(Board board){}
+
 }
